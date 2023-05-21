@@ -1,5 +1,5 @@
 'use client';
-import { createContext, useContext, Dispatch, SetStateAction, useState } from 'react';
+import { createContext, useContext, Dispatch, SetStateAction, useState, ReactNode } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
 type DataType = {
@@ -24,7 +24,7 @@ const GlobalContext = createContext<ContextProps>({
     addShortenedUrl: (url: string, shortUrl: string) => { },
 });
 
-export const GlobalContextProvider = ({ children }) => {
+export const GlobalContextProvider = ({ children }: { children: ReactNode }) => {
     const [shortenedUrl, setShortenedUrl] = useState<string>('');
     const [data, setData] = useState<DataType[]>([]);
 
