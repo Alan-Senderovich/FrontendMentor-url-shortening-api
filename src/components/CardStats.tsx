@@ -1,12 +1,10 @@
 import Image from "next/image";
 
-
 type Props = {
     title: string;
     text: string;
     pos: string;
 }
-
 
 const CardStats = ({ title, text, pos }: Props) => {
     let imageSrc = "";

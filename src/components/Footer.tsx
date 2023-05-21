@@ -1,5 +1,4 @@
 import Image from "next/image"
-import Link from "next/link"
 import LinksFooter from "./LinksFooter"
 import SocialIcons from "./SocialIcons"
 
@@ -114,7 +113,7 @@ const Footer = () => {
                     ))}
                     <div className="flex gap-4 pt-8 md:pt-0">
                         {dataSocial && dataSocial.map((item) => (
-                            <SocialIcons key={item.id} item={item}/>
+                            <SocialIcons key={item.id} item={item} />
                         ))}
                     </div>
                 </div>

@@ -1,3 +1,10 @@
+import { RefObject } from 'react';
+
+interface StatisticsProps {
+    scrollTargetRef: RefObject<HTMLDivElement>;
+}
+
+
 import CardStats from "./CardStats"
 import InputContainer from "./InputContainer"
 import ListUrls from "./ListUrls"
@@ -27,9 +34,9 @@ const dataItems = [
     }
 ]
 
-const Statistics = () => {
+const Statistics: React.FC<StatisticsProps> = ({ scrollTargetRef }) => {
     return (
-        <div className='bg-customGray pb-24 relative'>
+        <div id="statistics" className='bg-customGray pb-24 relative'>
             <div className='main-container-mob md:main-container pt-28'>
                 {/* ------- */}
                 <ListUrls />
@@ -52,7 +59,9 @@ const Statistics = () => {
                 </div>
             </div>
             {/* ------- */}
-            <InputContainer />
+            <div ref={scrollTargetRef}>
+                <InputContainer />
+            </div>
             {/* ------- */}
         </div>
     )

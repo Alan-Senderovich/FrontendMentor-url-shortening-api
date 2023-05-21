@@ -27,6 +27,7 @@ const GlobalContext = createContext<ContextProps>({
 export const GlobalContextProvider = ({ children }: { children: ReactNode }) => {
     const [shortenedUrl, setShortenedUrl] = useState<string>('');
     const [data, setData] = useState<DataType[]>([]);
+    59252503
 
     const addShortenedUrl = (url: string, shortUrl: string) => {
         const newData = [...data, { id: uuidv4(), url, shortUrl }];
