@@ -7,7 +7,7 @@ interface StatisticsProps {
 export const handleScroll = (scrollTargetRef: RefObject<HTMLDivElement>) => {
   if (scrollTargetRef.current) {
     window.scrollTo({
-      top: scrollTargetRef.current.offsetTop - 250,
+      top: scrollTargetRef.current.offsetTop,
       behavior: "smooth",
     });
   }
